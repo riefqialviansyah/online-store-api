@@ -1,5 +1,7 @@
 "use strict";
 const { Model } = require("sequelize");
+const { uuid } = require("uuidv4");
+
 module.exports = (sequelize, DataTypes) => {
   class AdminHistory extends Model {
     /**
@@ -22,6 +24,11 @@ module.exports = (sequelize, DataTypes) => {
     {
       sequelize,
       modelName: "AdminHistory",
+      hooks: {
+        beforeCreate(history) {
+          history.id = uuid();
+        },
+      },
     }
   );
   return AdminHistory;

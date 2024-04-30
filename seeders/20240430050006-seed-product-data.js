@@ -28,6 +28,7 @@ module.exports = {
         name: product.name,
         isDelete: false,
         brand: product.brand,
+        stock: product.stock,
         createdAt: new Date(),
         updatedAt: new Date(),
       };
@@ -38,6 +39,7 @@ module.exports = {
     const seedDetailData = productData.map((product, idx) => {
       delete product.name;
       delete product.brand;
+      delete product.stock;
 
       product.id = uuid();
       product.launch = new Date(product.launch);

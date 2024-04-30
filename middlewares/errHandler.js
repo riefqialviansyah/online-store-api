@@ -7,6 +7,7 @@ const errHandler = (err, req, res, next) => {
     case "SequelizeUniqueConstraintError":
       res.status(400).json({ message: err.errors[0].message });
       break;
+    case "Invalid token":
     case "Unauthorized":
       res.status(403).json({ message: err.message });
       break;

@@ -45,11 +45,6 @@ module.exports = (sequelize, DataTypes) => {
     {
       sequelize,
       modelName: "Product",
-      hooks: {
-        beforeBulkCreate(product) {
-          product.id = uuid();
-        },
-      },
     }
   );
   return Product;

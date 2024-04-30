@@ -62,11 +62,7 @@ class UserController {
       }
 
       // generate token
-      const accessToken = signToken({
-        id: user.id,
-        email: user.email,
-        role: user.role,
-      });
+      const accessToken = signToken({ id: user.id });
 
       // send response
       res.status(200).json({ message: "Success login", token: accessToken });
