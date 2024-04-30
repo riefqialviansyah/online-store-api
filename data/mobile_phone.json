@@ -11,7 +11,8 @@
     "mainCamera": "12 MP (wide), 12 MP (ultrawide), 12 MP (telephoto)",
     "selfieCamera": "12 MP",
     "battery": "Non-removable Li-Ion 3095 mAh battery",
-    "otherSpec": "Face ID, IP68 dust/water resistant, 5G capable"
+    "otherSpec": "Face ID, IP68 dust/water resistant, 5G capable",
+    "price": 15000000
   },
   {
     "name": "Samsung Galaxy S21 Ultra",
@@ -25,21 +26,23 @@
     "mainCamera": "108 MP (wide), 12 MP (ultrawide), 10 MP (telephoto), 10 MP (periscope telephoto)",
     "selfieCamera": "40 MP",
     "battery": "Non-removable Li-Ion 5000 mAh battery",
-    "otherSpec": "IP68 dust/water resistant, 5G capable, S Pen support"
+    "otherSpec": "IP68 dust/water resistant, 5G capable, S Pen support",
+    "price": 21000000
   },
   {
-    "name": "Google Pixel 6 Pro",
+    "name": "Google Pixel 7 Pro",
     "brand": "Google",
     "launch": "2021",
     "os": "Android 12",
-    "imgUrl": "https://example.com/pixel6pro.jpg",
+    "imgUrl": "https://example.com/pixel7pro.jpg",
     "resolution": "1440 x 3120 pixels",
     "internalMemory": "128GB / 256GB",
     "ram": "12GB",
     "mainCamera": "50 MP (wide), 12 MP (ultrawide), 48 MP (telephoto)",
     "selfieCamera": "12 MP",
     "battery": "Non-removable Li-Po 5000 mAh battery",
-    "otherSpec": "IP68 dust/water resistant, 5G capable"
+    "otherSpec": "IP68 dust/water resistant, 5G capable",
+    "price": 10000000
   },
   {
     "name": "OnePlus 9 Pro",
@@ -53,7 +56,8 @@
     "mainCamera": "48 MP (wide), 50 MP (ultrawide), 8 MP (telephoto), 2 MP (depth)",
     "selfieCamera": "16 MP",
     "battery": "Non-removable Li-Po 4500 mAh battery",
-    "otherSpec": "IP68 dust/water resistant, 5G capable"
+    "otherSpec": "IP68 dust/water resistant, 5G capable",
+    "price": 12000000
   },
   {
     "name": "Xiaomi Mi 11 Ultra",
@@ -67,7 +71,8 @@
     "mainCamera": "50 MP (wide), 48 MP (ultrawide), 48 MP (telephoto)",
     "selfieCamera": "20 MP",
     "battery": "Non-removable Li-Ion 5000 mAh battery",
-    "otherSpec": "IP68 dust/water resistant, 5G capable"
+    "otherSpec": "IP68 dust/water resistant, 5G capable",
+    "price": 9000000
   },
   {
     "name": "Sony Xperia 1 III",
@@ -81,7 +86,8 @@
     "mainCamera": "12 MP (wide), 12 MP (ultrawide), 12 MP (telephoto)",
     "selfieCamera": "8 MP",
     "battery": "Non-removable Li-Po 4500 mAh battery",
-    "otherSpec": "IP65/IP68 dust/water resistant, 5G capable"
+    "otherSpec": "IP65/IP68 dust/water resistant, 5G capable",
+    "price": 6000000
   },
   {
     "name": "Asus ROG Phone 5",
@@ -95,7 +101,8 @@
     "mainCamera": "64 MP (wide), 13 MP (ultrawide), 5 MP (macro)",
     "selfieCamera": "24 MP",
     "battery": "Non-removable Li-Po 6000 mAh battery",
-    "otherSpec": "5G capable, AirTrigger 5, 144 Hz refresh rate"
+    "otherSpec": "5G capable, AirTrigger 5, 144 Hz refresh rate",
+    "price": 8000000
   },
   {
     "name": "Realme GT",
@@ -109,7 +116,8 @@
     "mainCamera": "64 MP (wide), 8 MP (ultrawide), 2 MP (macro)",
     "selfieCamera": "16 MP",
     "battery": "Non-removable Li-Po 4500 mAh battery",
-    "otherSpec": "5G capable, 120 Hz refresh rate"
+    "otherSpec": "5G capable, 120 Hz refresh rate",
+    "price": 11000000
   },
   {
     "name": "Nokia G50",
@@ -123,7 +131,8 @@
     "mainCamera": "48 MP (wide), 5 MP (ultrawide), 2 MP (depth)",
     "selfieCamera": "8 MP",
     "battery": "Non-removable Li-Po 5000 mAh battery",
-    "otherSpec": "5G capable, IPX2 splash proof"
+    "otherSpec": "5G capable, IPX2 splash proof",
+    "price": 5000000
   },
   {
     "name": "Motorola Edge 20 Pro",
@@ -137,7 +146,8 @@
     "mainCamera": "108 MP (wide), 16 MP (ultrawide), 8 MP (telephoto)",
     "selfieCamera": "32 MP",
     "battery": "Non-removable Li-Po 4500 mAh battery",
-    "otherSpec": "5G capable, 144 Hz refresh rate"
+    "otherSpec": "5G capable, 144 Hz refresh rate",
+    "price": 20000000
   },
   {
     "name": "Oppo Find X3 Pro",
@@ -151,7 +161,8 @@
     "mainCamera": "50 MP (wide), 50 MP (ultrawide), 13 MP (telephoto), 3 MP (macro)",
     "selfieCamera": "32 MP",
     "battery": "Non-removable Li-Po 4500 mAh battery",
-    "otherSpec": "IP68 dust/water resistant, 5G capable"
+    "otherSpec": "IP68 dust/water resistant, 5G capable",
+    "price": 12000000
   },
   {
     "name": "Vivo X60 Pro+",
@@ -165,7 +176,8 @@
     "mainCamera": "50 MP (wide), 48 MP (ultrawide), 32 MP (telephoto), 8 MP (periscope telephoto)",
     "selfieCamera": "32 MP",
     "battery": "Non-removable Li-Po 4200 mAh battery",
-    "otherSpec": "5G capable, Zeiss optics"
+    "otherSpec": "5G capable, Zeiss optics",
+    "price": 6000000
   },
   {
     "name": "ZTE Axon 30 Ultra",
@@ -179,7 +191,8 @@
     "mainCamera": "64 MP (wide), 64 MP (ultrawide), 64 MP (telephoto), 8 MP (periscope telephoto)",
     "selfieCamera": "16 MP",
     "battery": "Non-removable Li-Po 4600 mAh battery",
-    "otherSpec": "5G capable, 144 Hz refresh rate"
+    "otherSpec": "5G capable, 144 Hz refresh rate",
+    "price": 8000000
   },
   {
     "name": "TCL 20 Pro 5G",
@@ -193,7 +206,8 @@
     "mainCamera": "48 MP (wide), 16 MP (ultrawide), 5 MP (macro), 2 MP (depth)",
     "selfieCamera": "32 MP",
     "battery": "Non-removable Li-Po 4500 mAh battery",
-    "otherSpec": "5G capable, IP52 dust/water resistant"
+    "otherSpec": "5G capable, IP52 dust/water resistant",
+    "price": 5000000
   },
   {
     "name": "Poco F3",
@@ -207,7 +221,8 @@
     "mainCamera": "48 MP (wide), 8 MP (ultrawide), 5 MP (macro)",
     "selfieCamera": "20 MP",
     "battery": "Non-removable Li-Po 4520 mAh battery",
-    "otherSpec": "5G capable, 120 Hz refresh rate"
+    "otherSpec": "5G capable, 120 Hz refresh rate",
+    "price": 4000000
   },
   {
     "name": "Lenovo Legion Phone Duel 2",
@@ -221,7 +236,8 @@
     "mainCamera": "64 MP (wide), 16 MP (ultrawide), 44 MP (telephoto)",
     "selfieCamera": "44 MP",
     "battery": "Non-removable Li-Po 5500 mAh battery",
-    "otherSpec": "5G capable, 144 Hz refresh rate"
+    "otherSpec": "5G capable, 144 Hz refresh rate",
+    "price": 15000000
   },
   {
     "name": "Black Shark 4 Pro",
@@ -235,7 +251,8 @@
     "mainCamera": "64 MP (wide), 8 MP (ultrawide), 5 MP (macro)",
     "selfieCamera": "20 MP",
     "battery": "Non-removable Li-Po 4500 mAh battery",
-    "otherSpec": "5G capable, 144 Hz refresh rate"
+    "otherSpec": "5G capable, 144 Hz refresh rate",
+    "price": 7000000
   },
   {
     "name": "Honor 50 Pro",
@@ -249,7 +266,8 @@
     "mainCamera": "108 MP (wide), 8 MP (ultrawide), 2 MP (depth)",
     "selfieCamera": "32 MP",
     "battery": "Non-removable Li-Po 4000 mAh battery",
-    "otherSpec": "5G capable, 120 Hz refresh rate"
+    "otherSpec": "5G capable, 120 Hz refresh rate",
+    "price": 6000000
   },
   {
     "name": "Infinix Zero X Pro",
@@ -263,7 +281,8 @@
     "mainCamera": "108 MP (wide), 8 MP (ultrawide), 8 MP (periscope telephoto)",
     "selfieCamera": "16 MP",
     "battery": "Non-removable Li-Po 4500 mAh battery",
-    "otherSpec": "5G capable, 120 Hz refresh rate"
+    "otherSpec": "5G capable, 120 Hz refresh rate",
+    "price": 3000000
   },
   {
     "name": "Tecno Camon 18 Premier",
@@ -277,7 +296,8 @@
     "mainCamera": "64 MP (wide), 8 MP (ultrawide), 2 MP (depth)",
     "selfieCamera": "48 MP",
     "battery": "Non-removable Li-Po 4500 mAh battery",
-    "otherSpec": "5G capable, 90 Hz refresh rate"
+    "otherSpec": "5G capable, 90 Hz refresh rate",
+    "price": 2000000
   },
   {
     "name": "Ulefone Armor 11T 5G",
@@ -291,7 +311,8 @@
     "mainCamera": "48 MP (wide), 20 MP (ultrawide), 8 MP (telephoto), 2 MP (macro)",
     "selfieCamera": "16 MP",
     "battery": "Non-removable Li-Po 5200 mAh battery",
-    "otherSpec": "5G capable, IP68/IP69K dust/water resistant"
+    "otherSpec": "5G capable, IP68/IP69K dust/water resistant",
+    "price": 1000000
   },
   {
     "name": "Cat S62 Pro",
@@ -305,7 +326,8 @@
     "mainCamera": "12 MP (wide)",
     "selfieCamera": "8 MP",
     "battery": "Non-removable Li-Ion 4000 mAh battery",
-    "otherSpec": "IP68 dust/water resistant, MIL-STD-810H compliant"
+    "otherSpec": "IP68 dust/water resistant, MIL-STD-810H compliant",
+    "price": 8000000
   },
   {
     "name": "Cubot King Kong 7",
@@ -319,7 +341,8 @@
     "mainCamera": "48 MP (wide), 8 MP (ultrawide), 2 MP (depth)",
     "selfieCamera": "8 MP",
     "battery": "Non-removable Li-Po 8000 mAh battery",
-    "otherSpec": "IP68/IP69K dust/water resistant, MIL-STD-810G compliant"
+    "otherSpec": "IP68/IP69K dust/water resistant, MIL-STD-810G compliant",
+    "price": 5000000
   },
   {
     "name": "Doogee S97 Pro",
@@ -333,7 +356,8 @@
     "mainCamera": "48 MP (wide), 8 MP (ultrawide), 2 MP (depth)",
     "selfieCamera": "16 MP",
     "battery": "Non-removable Li-Po 8500 mAh battery",
-    "otherSpec": "IP68/IP69K dust/water resistant, MIL-STD-810G compliant"
+    "otherSpec": "IP68/IP69K dust/water resistant, MIL-STD-810G compliant",
+    "price": 4000000
   },
   {
     "name": "Oukitel WP15",
@@ -347,35 +371,38 @@
     "mainCamera": "48 MP (wide), 8 MP (ultrawide), 2 MP (depth)",
     "selfieCamera": "8 MP",
     "battery": "Non-removable Li-Po 15000 mAh battery",
-    "otherSpec": "IP68/IP69K dust/water resistant, MIL-STD-810G compliant"
+    "otherSpec": "IP68/IP69K dust/water resistant, MIL-STD-810G compliant",
+    "price": 3000000
   },
   {
-    "name": "iPhone 13 Pro",
+    "name": "iPhone 14 Pro",
     "brand": "Apple",
     "launch": "2021",
     "os": "iOS 15",
-    "imgUrl": "https://example.com/iphone13pro.jpg",
+    "imgUrl": "https://example.com/iphone14pro.jpg",
     "resolution": "1170 x 2532 pixels",
     "internalMemory": "128GB / 256GB / 512GB / 1TB",
     "ram": "6GB",
     "mainCamera": "12 MP (wide), 12 MP (ultrawide), 12 MP (telephoto)",
     "selfieCamera": "12 MP",
     "battery": "Non-removable Li-Ion 3095 mAh battery",
-    "otherSpec": "Face ID, IP68 dust/water resistant, 5G capable"
+    "otherSpec": "Face ID, IP68 dust/water resistant, 5G capable",
+    "price": 15000000
   },
   {
-    "name": "Samsung Galaxy S21 Ultra",
+    "name": "Samsung Galaxy S22 Ultra",
     "brand": "Samsung",
     "launch": "2021",
     "os": "Android 11, One UI 3.1",
-    "imgUrl": "https://example.com/galaxys21ultra.jpg",
+    "imgUrl": "https://example.com/galaxys22ultra.jpg",
     "resolution": "1440 x 3200 pixels",
     "internalMemory": "128GB / 256GB / 512GB",
     "ram": "12GB / 16GB",
     "mainCamera": "108 MP (wide), 12 MP (ultrawide), 10 MP (telephoto), 10 MP (periscope telephoto)",
     "selfieCamera": "40 MP",
     "battery": "Non-removable Li-Ion 5000 mAh battery",
-    "otherSpec": "IP68 dust/water resistant, 5G capable, S Pen support"
+    "otherSpec": "IP68 dust/water resistant, 5G capable, S Pen support",
+    "price": 21000000
   },
   {
     "name": "Google Pixel 6 Pro",
@@ -388,6 +415,8 @@
     "ram": "12GB",
     "mainCamera": "50 MP (wide), 12 MP (ultrawide), 48 MP (telephoto)",
     "selfieCamera": "12 MP",
-    "battery": "Non-removable Li-Po 5000 mAh battery"
+    "battery": "Non-removable Li-Po 5000 mAh battery",
+    "otherSpec": "IP68 dust/water resistant, 5G capable",
+    "price": 10000000
   }
 ]
