@@ -10,6 +10,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Product.hasOne(models.Detail, { foreignKey: "ProductId" });
     }
   }
   Product.init(
@@ -30,6 +31,14 @@ module.exports = (sequelize, DataTypes) => {
         validate: {
           notNull: { msg: "Brand is required" },
           notEmpty: { msg: "Brand is required" },
+        },
+      },
+      stock: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        validate: {
+          notNull: { msg: "Stock is required" },
+          notEmpty: { msg: "Stock is required" },
         },
       },
     },
