@@ -6,6 +6,7 @@ class ProductController {
     try {
       // query data from table Products with eager loading table Details
       const products = await Product.findAll({
+        where: { isDelete: false },
         attributes: ["id", "name", "price", "stock", "imgUrl"],
         include: {
           model: Detail,
@@ -246,9 +247,53 @@ class ProductController {
   }
 
   static async delete(req, res, next) {
+    // create transaction for atomic transaction
+    const t = await sequelize.transaction();
+
     try {
-      res.status(200).json({ message: "Success delete product", data: {} });
+      // get ProductId from input user
+      const { ProductId } = req.body;
+
+      // check if ProductId is empty
+      if (!ProductId) {
+        throw { name: "Invalid input", message: "ProductId is required" };
+      }
+
+      // find product data in database
+      const productToDel = await Product.findByPk(ProductId);
+
+      if (!productToDel) {
+        throw { name: "Not Found", message: "Product not found" };
+      }
+
+      // prepare data for table AdminHistories
+      const historyData = {
+        UserId: req.user.id,
+        ProductId: ProductId,
+        changeType: "delete",
+      };
+
+      // delete product data
+      // await productToDel.destroy({ transaction: t });
+      await productToDel.update({ isDelete: true }, { transaction: t });
+
+      // prepare data for response
+      let responseData = {
+        name: productToDel.name,
+        statusDelete: productToDel.isDelete,
+      };
+
+      // insert data to table AdminHistories
+      await AdminHistory.create(historyData, { transaction: t });
+
+      // commit atomic transaction if all query success
+      await t.commit();
+
+      res
+        .status(200)
+        .json({ message: "Success delete product", data: responseData });
     } catch (error) {
+      await t.rollback();
       next(error);
     }
   }
