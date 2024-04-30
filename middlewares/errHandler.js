@@ -11,6 +11,9 @@ const errHandler = (err, req, res, next) => {
     case "Unauthorized":
       res.status(403).json({ message: err.message });
       break;
+    case "Not Found":
+      res.status(403).json({ message: err.message });
+      break;
     default:
       console.log(err);
       res.status(500).json({ message: "Internal server error" });

@@ -23,9 +23,6 @@ module.exports = {
       os: {
         type: Sequelize.STRING,
       },
-      imgUrl: {
-        type: Sequelize.STRING,
-      },
       resolution: {
         type: Sequelize.STRING,
       },
@@ -44,11 +41,11 @@ module.exports = {
       battery: {
         type: Sequelize.STRING,
       },
-      otherSpec: {
+      brand: {
         type: Sequelize.STRING,
       },
-      price: {
-        type: Sequelize.INTEGER,
+      otherSpec: {
+        type: Sequelize.STRING,
       },
       createdAt: {
         allowNull: false,

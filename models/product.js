@@ -25,12 +25,13 @@ module.exports = (sequelize, DataTypes) => {
         },
       },
       isDelete: DataTypes.BOOLEAN,
-      brand: {
-        type: DataTypes.STRING,
+      price: {
+        type: DataTypes.INTEGER,
         allowNull: false,
+        defaultValue: 0,
         validate: {
-          notNull: { msg: "Brand is required" },
-          notEmpty: { msg: "Brand is required" },
+          notNull: { msg: "Price is required" },
+          notEmpty: { msg: "Price is required" },
         },
       },
       stock: {
@@ -39,6 +40,14 @@ module.exports = (sequelize, DataTypes) => {
         validate: {
           notNull: { msg: "Stock is required" },
           notEmpty: { msg: "Stock is required" },
+        },
+      },
+      imgUrl: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+          notNull: { msg: "Image URL is required" },
+          notEmpty: { msg: "Image URL is required" },
         },
       },
     },

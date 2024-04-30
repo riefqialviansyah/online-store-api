@@ -27,8 +27,9 @@ module.exports = {
         id: uuid(),
         name: product.name,
         isDelete: false,
-        brand: product.brand,
+        price: product.price,
         stock: product.stock,
+        imgUrl: product.imgUrl,
         createdAt: new Date(),
         updatedAt: new Date(),
       };
@@ -36,17 +37,18 @@ module.exports = {
     });
 
     // prepare data for table Details
-    const seedDetailData = productData.map((product, idx) => {
-      delete product.name;
-      delete product.brand;
-      delete product.stock;
+    const seedDetailData = productData.map((detail, idx) => {
+      delete detail.name;
+      delete detail.price;
+      delete detail.stock;
+      delete detail.imgUrl;
 
-      product.id = uuid();
-      product.launch = new Date(product.launch);
-      product.ProductId = seedProductData[idx].id;
-      product.createdAt = product.updatedAt = new Date();
+      detail.id = uuid();
+      detail.launch = new Date(detail.launch);
+      detail.ProductId = seedProductData[idx].id;
+      detail.createdAt = detail.updatedAt = new Date();
 
-      return product;
+      return detail;
     });
 
     // insert data to table Products

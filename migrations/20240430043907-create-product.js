@@ -19,12 +19,17 @@ module.exports = {
         allowNull: false,
         defaultValue: false,
       },
-      brand: {
-        type: Sequelize.STRING,
+      price: {
+        type: Sequelize.INTEGER,
         allowNull: false,
+        defaultValue: 0,
       },
       stock: {
         type: Sequelize.INTEGER,
+        allowNull: false,
+      },
+      imgUrl: {
+        type: Sequelize.STRING,
         allowNull: false,
       },
       createdAt: {
