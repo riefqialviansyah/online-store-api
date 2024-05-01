@@ -8,8 +8,8 @@
 - `git clone https://github.com/riefqialviansyah/online-store-api.git`
 - `cd online-store-api`
 - enter project folder `npm i` will install package
+- create file .env and copy data from .env-example
 - setup your username, password, database name, and dialect for postgresSQL in file /config/config.json
-
 - `npm run db` will create db in postgres
 - `npm run setup` will migrate table and seeding dummy data to database
 - `npm run start` api will running at port 3000
