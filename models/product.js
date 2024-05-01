@@ -27,7 +27,6 @@ module.exports = (sequelize, DataTypes) => {
       price: {
         type: DataTypes.INTEGER,
         allowNull: false,
-        defaultValue: 0,
         validate: {
           notNull: { msg: "Price is required" },
           notEmpty: { msg: "Price is required" },

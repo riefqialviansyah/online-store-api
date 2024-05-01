@@ -1,5 +1,6 @@
 const { uuid } = require("uuidv4");
 const { Product, Detail, sequelize, AdminHistory } = require("../models");
+const { Op } = require("sequelize");
 
 class ProductController {
   static async getAll(req, res, next) {
@@ -15,7 +16,10 @@ class ProductController {
       });
 
       // send response
-      res.status(200).json({ message: "List products", data: products });
+      res.status(200).json({
+        message: "List products",
+        data: products,
+      });
     } catch (error) {
       next(error);
     }
@@ -260,7 +264,9 @@ class ProductController {
       }
 
       // find product data in database
-      const productToDel = await Product.findByPk(ProductId);
+      const productToDel = await Product.findOne({
+        where: { id: ProductId, isDelete: false },
+      });
 
       if (!productToDel) {
         throw { name: "Not Found", message: "Product not found" };
@@ -279,6 +285,7 @@ class ProductController {
 
       // prepare data for response
       let responseData = {
+        id: productToDel.id,
         name: productToDel.name,
         statusDelete: productToDel.isDelete,
       };
@@ -294,6 +301,52 @@ class ProductController {
         .json({ message: "Success delete product", data: responseData });
     } catch (error) {
       await t.rollback();
+      next(error);
+    }
+  }
+
+  static async findByProductName(req, res, next) {
+    try {
+      // get product search name and page from query params
+      const { search, page } = req.query;
+
+      // option for query data from table Products
+      const option = {
+        where: {},
+        attributes: ["id", "name", "price", "stock", "imgUrl"],
+      };
+
+      if (search) {
+        option.where.name = {
+          [Op.iLike]: `%${search}%`,
+        };
+      }
+
+      let limit = 5;
+      let pageNumber = 1;
+      if (page) {
+        pageNumber = page;
+        option.offset = limit * (pageNumber - 1);
+        option.limit = limit;
+      } else {
+        option.limit = limit;
+      }
+
+      // query data from table Products
+      const { count, rows } = await Product.findAndCountAll(option);
+
+      // send response
+      res.status(200).json({
+        message: "Success get product by name",
+        data: {
+          page: +page || 1,
+          totalPage: Math.ceil(count / limit),
+          totalData: count,
+          dataPerPage: +limit,
+          data: rows,
+        },
+      });
+    } catch (error) {
       next(error);
     }
   }

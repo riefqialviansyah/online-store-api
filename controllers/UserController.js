@@ -50,7 +50,7 @@ class UserController {
 
       // check if user is exist
       if (!user) {
-        throw { name: "Unauthorized", message: "Invalid username or password" };
+        throw { name: "Unauthorized", message: "Invalid email or password" };
       }
 
       // check pasword is valid or not
