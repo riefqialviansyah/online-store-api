@@ -4,11 +4,11 @@ const router = express.Router();
 // Import the product controller
 const ProductController = require("../controllers/ProductController");
 
-// Define product route for public access
-router.get("/pub", ProductController.findByProductName);
-
 // Import the auth middleware
 router.use(require("../middlewares/auth"));
+router.get("/pub", ProductController.findByProductName);
+
+// Import the admin middleware
 router.use(require("../middlewares/adminAccess"));
 
 // Define product route for admin access

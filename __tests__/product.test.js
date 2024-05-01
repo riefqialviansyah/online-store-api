@@ -80,11 +80,24 @@ describe("Product model", () => {
       .set("Authorization", `Bearer ${tokenAdmin}`);
 
     expect(response.status).toBe(200);
-    expect(response.body).toHaveProperty("message", "List products");
-    expect(response.body).toHaveProperty("data", expect.any(Array));
-    expect(response.body.data[0]).toHaveProperty("id", expect.any(String));
-    expect(response.body.data[0]).toHaveProperty("name", expect.any(String));
-    expect(response.body.data[0]).toHaveProperty("price", expect.any(Number));
+    expect(response.body).toHaveProperty("message", "List product and detail");
+    expect(response.body).toHaveProperty("data", expect.any(Object));
+    expect(response.body.data).toHaveProperty("page", 1);
+    expect(response.body.data).toHaveProperty("totalPage", expect.any(Number));
+    expect(response.body.data).toHaveProperty("data", expect.any(Array));
+  });
+
+  it("should get all product as admin with input page number", async () => {
+    const response = await request(app)
+      .get("/product/list?page=1")
+      .set("Authorization", `Bearer ${tokenAdmin}`);
+
+    expect(response.status).toBe(200);
+    expect(response.body).toHaveProperty("message", "List product and detail");
+    expect(response.body).toHaveProperty("data", expect.any(Object));
+    expect(response.body.data).toHaveProperty("page", 1);
+    expect(response.body.data).toHaveProperty("totalPage", expect.any(Number));
+    expect(response.body.data).toHaveProperty("data", expect.any(Array));
   });
 
   it("should error when get all products as user", async () => {
@@ -272,7 +285,7 @@ describe("Product model", () => {
       .set("Authorization", `Bearer ${tokenAdmin}`);
 
     expect(response.status).toBe(404);
-    expect(response.body).toHaveProperty("message", "Detail not found");
+    expect(response.body).toHaveProperty("message", "Product not found");
   });
 
   it("should error when try edit detail but not input Product Id", async () => {
@@ -337,26 +350,24 @@ describe("Product model", () => {
   });
 
   it("should can search product by name", async () => {
-    const response = await request(app).get("/product/pub?search=Samsung");
+    const response = await request(app)
+      .get("/product/pub?search=Samsung")
+      .set("Authorization", `Bearer ${tokenUser}`);
 
     expect(response.status).toBe(200);
-    expect(response.body).toHaveProperty(
-      "message",
-      "Success get product by name"
-    );
+    expect(response.body).toHaveProperty("message", "List product");
     expect(response.body).toHaveProperty("data", expect.any(Object));
     expect(response.body.data).toHaveProperty("page", 1);
     expect(response.body.data.data[0]).toHaveProperty("id", expect.any(String));
   });
 
   it("should can get product as public with input page number", async () => {
-    const response = await request(app).get("/product/pub?page=1");
+    const response = await request(app)
+      .get("/product/pub?page=1")
+      .set("Authorization", `Bearer ${tokenUser}`);
 
     expect(response.status).toBe(200);
-    expect(response.body).toHaveProperty(
-      "message",
-      "Success get product by name"
-    );
+    expect(response.body).toHaveProperty("message", "List product");
     expect(response.body).toHaveProperty("data", expect.any(Object));
     expect(response.body.data).toHaveProperty("page", 1);
     expect(response.body.data).toHaveProperty("totalPage", expect.any(Number));

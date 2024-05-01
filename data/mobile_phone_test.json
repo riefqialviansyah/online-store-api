@@ -1,8 +1,8 @@
 {
-  "name": "Xiaomi Mi 12 Ultra",
+  "name": "Xiaomi Mi 15 Ultra",
   "brand": "Xiaomi",
   "launch": "2021",
-  "os": "Android 11, MIUI 12.5",
+  "os": "Android 12, MIUI 15.5",
   "imgUrl": "https://example.com/mi11ultra.jpg",
   "resolution": "1440 x 3200 pixels",
   "internalMemory": "256GB / 512GB",

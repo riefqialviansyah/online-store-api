@@ -118,7 +118,7 @@ OR
 
 ## `GET` /product/list
 
-View all product data with `admin` authorization.
+get all product, detail product and search product with role `admin` authorization.
 
 ### Request
 
@@ -130,56 +130,46 @@ View all product data with `admin` authorization.
 }
 ```
 
+- params (optional)
+
+example (page): /product/pub?page=1
+
+example (search): /product/pub?search=iphon
+
 ### Response
 
 _200 - Ok_
 
 ```json
 {
-  "message": "List products",
-  "data": [
-    {
-      "id": "9704f2ea-3eaf-444e-83b1-35c00ef6eafe",
-      "name": "iPhone 13 Pro",
-      "price": 15000000,
-      "stock": 240,
-      "imgUrl": "https://example.com/iphone13pro.jpg",
-      "Detail": {
-        "ProductId": "9704f2ea-3eaf-444e-83b1-35c00ef6eafe",
-        "launch": "2021-01-01T00:00:00.000Z",
-        "os": "iOS 15",
-        "resolution": "1170 x 2532 pixels",
-        "internalMemory": "128GB / 256GB / 512GB / 1TB",
-        "ram": "6GB",
-        "mainCamera": "12 MP (wide), 12 MP (ultrawide), 12 MP (telephoto)",
-        "selfieCamera": "12 MP",
-        "battery": "Non-removable Li-Ion 3095 mAh battery",
-        "brand": "Apple",
-        "otherSpec": "Face ID, IP68 dust/water resistant, 5G capable"
+  "message": "list product and detail",
+  "data": {
+    "page": 1,
+    "totalPage": 6,
+    "totalData": 29,
+    "dataPerPage": 5,
+    "data": [
+      {
+        "id": "UUID",
+        "name": "Xiaomi Mi 12 Ultra",
+        "price": 5000000,
+        "stock": 200,
+        "imgUrl": "https://example.com/mi11ultra.jpg",
+        "Detail": {
+          "launch": "2021-01-01T00:00:00.000Z",
+          "os": "Android Latest",
+          "resolution": "1440 x 3200 pixels",
+          "internalMemory": "256GB / 512GB",
+          "ram": "30 GB",
+          "mainCamera": "50 MP (wide), 48 MP (periscope telephoto), 48 MP (ultrawide)",
+          "selfieCamera": "20 MP",
+          "battery": "Non-removable Li-Po 5000 mAh battery",
+          "brand": "Xiaomi",
+          "otherSpec": "IP68 dust/water resistant, 5G capable"
+        }
       }
-    },
-    {
-      "id": "89c2dc9d-787b-4502-9d41-f5aa6b46867c",
-      "name": "Samsung Galaxy S21 Ultra",
-      "price": 21000000,
-      "stock": 120,
-      "imgUrl": "https://example.com/galaxys21ultra.jpg",
-      "Detail": {
-        "ProductId": "89c2dc9d-787b-4502-9d41-f5aa6b46867c",
-        "launch": "2021-01-01T00:00:00.000Z",
-        "os": "Android 11, One UI 3.1",
-        "resolution": "1440 x 3200 pixels",
-        "internalMemory": "128GB / 256GB / 512GB",
-        "ram": "12GB / 16GB",
-        "mainCamera": "108 MP (wide), 12 MP (ultrawide), 10 MP (telephoto), 10 MP (periscope telephoto)",
-        "selfieCamera": "40 MP",
-        "battery": "Non-removable Li-Ion 5000 mAh battery",
-        "brand": "Samsung",
-        "otherSpec": "IP68 dust/water resistant, 5G capable, S Pen support"
-      }
-    },
-    ...
-  ]
+    ]
+  }
 }
 ```
 
@@ -278,7 +268,7 @@ OR
 
 ## `PUT` /product/edit
 
-Edit product data.
+Edit product data value.
 
 ### Request
 
@@ -324,7 +314,7 @@ _200 - Ok_
 
 ## `PUT` /product/detail/edit
 
-Edit detail product.
+Edit detail product value.
 
 ### Request
 
@@ -392,6 +382,8 @@ _404 - Not Found_
 
 ## `DELETE` /product/delete
 
+Delete product.
+
 ### Request
 
 - header
@@ -435,9 +427,19 @@ _404 - Not Found_
 
 ## `GET` /product/pub
 
+Get list product and search by product name with minumun with role user authentication.
+
 ### Request
 
-- params
+- header
+
+```json
+{
+  "Authorization": <Access Token>
+}
+```
+
+- params (optional)
 
 example (page): /product/pub?page=1
 
@@ -449,7 +451,7 @@ _200 - Ok_
 
 ```json
 {
-  "message": "Success get product by name",
+  "message": "List product",
   "data": {
     "page": 1,
     "totalPage": 1,
@@ -477,7 +479,7 @@ _200 - Ok_
 
 ## GLOBAL ERROR
 
-_403 - Unauthorize_
+_403 - Forbidden_
 
 ```json
 {
