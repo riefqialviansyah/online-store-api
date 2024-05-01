@@ -28,4 +28,4 @@
 
 ## ERD
 
-![alt text](./erd%20-%20api-10xers%20Labs.jpg)
+![alt text](api-10xers%20Labs%20new.jpg)

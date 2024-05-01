@@ -191,22 +191,20 @@ Add new product.
 
 ```json
 {
-    {
-    "name": "Xiaomi Mi 12 Ultra",
-    "price": 4000000,
-    "stock": 124,
-    "imgUrl": "https://example.com/mi11ultra.jpg",
-    "launch": "2021",
-    "os": "Android 11, MIUI 12.5",
-    "resolution": "1440 x 3200 pixels",
-    "internalMemory": "256GB / 512GB",
-    "ram": "8GB / 12GB",
-    "mainCamera": "50 MP (wide), 48 MP (periscope telephoto), 48 MP (ultrawide)",
-    "selfieCamera": "20 MP",
-    "battery": "Non-removable Li-Po 5000 mAh battery",
-    "brand": "Xiaomi",
-    "otherSpec": "IP68 dust/water resistant, 5G capable",
-  }
+  "name": "Xiaomi Mi 12 Ultra",
+  "price": 4000000,
+  "stock": 124,
+  "imgUrl": "https://example.com/mi11ultra.jpg",
+  "launch": "2021",
+  "os": "Android 11, MIUI 12.5",
+  "resolution": "1440 x 3200 pixels",
+  "internalMemory": "256GB / 512GB",
+  "ram": "8GB / 12GB",
+  "mainCamera": "50 MP (wide), 48 MP (periscope telephoto), 48 MP (ultrawide)",
+  "selfieCamera": "20 MP",
+  "battery": "Non-removable Li-Po 5000 mAh battery",
+  "brand": "Xiaomi",
+  "otherSpec": "IP68 dust/water resistant, 5G capable"
 }
 ```
 
@@ -333,7 +331,7 @@ You can edit value of key `launch, os, resolution, internalMemory, ram, mainCame
 ```json
 {
   "ProductId": <UUID>,
-  "os": "Android Terbatu Mantap",
+  "os": "Android latest",
   "ram": "30 GB"
 }
 ```
@@ -349,7 +347,7 @@ _200 - Ok_
     "id": "UUID",
     "ProductId": "UUID",
     "launch": "date",
-    "os": "Android Terbatu Mantap",
+    "os": "Android latest",
     "resolution": "1170 x 2532 pixels",
     "internalMemory": "128GB / 256GB / 512GB / 1TB",
     "ram": "30 GB",
