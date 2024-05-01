@@ -4,14 +4,27 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --verbose --detectOpenHandles  --coverage",
+    "db": "npx sequelize db:create",
+    "start": "npx nodemon bin/www",
+    "setup": "npx sequelize db:migrate:undo:all && npx sequelize db:migrate && npx sequelize db:seed:all"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.5",
     "express": "^4.19.2",
+    "jest": "^29.7.0",
+    "jsonwebtoken": "^9.0.2",
     "nodemon": "^3.1.0",
-    "pg": "^8.11.5"
+    "pg": "^8.11.5",
+    "sequelize": "^6.37.3",
+    "supertest": "^7.0.0",
+    "uuidv4": "^6.2.13"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.6.2"
   }
 }
