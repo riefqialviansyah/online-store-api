@@ -91,7 +91,7 @@ class ProductController {
       await t.commit();
 
       // send response
-      res.status(200).json({
+      res.status(201).json({
         message: "Success add product",
         product: newProduct,
         detail: newDetail,
@@ -113,7 +113,7 @@ class ProductController {
 
       // check if ProductId is empty
       if (!ProductId) {
-        throw { name: "Invalid input", message: "ProductId is required" };
+        throw { name: "Invalid Input", message: "ProductId is required" };
       }
 
       // find product data in database
@@ -176,7 +176,7 @@ class ProductController {
 
       // check if DetailId is empty
       if (!ProductId) {
-        throw { name: "Invalid input", message: "Product id is required" };
+        throw { name: "Invalid Input", message: "Product id is required" };
       }
 
       // find detail data in database
@@ -260,7 +260,7 @@ class ProductController {
 
       // check if ProductId is empty
       if (!ProductId) {
-        throw { name: "Invalid input", message: "ProductId is required" };
+        throw { name: "Invalid Input", message: "Product id is required" };
       }
 
       // find product data in database

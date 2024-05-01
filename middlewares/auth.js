@@ -8,7 +8,7 @@ const auth = async (req, res, next) => {
 
     // check if authorization header is exist
     if (!authorization) {
-      throw { name: "Invalid token", message: "Invalid tokan" };
+      throw { name: "Invalid token", message: "Invalid token" };
     }
 
     // split authorization header

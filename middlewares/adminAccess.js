@@ -3,7 +3,7 @@ const adminAccess = async (req, res, next) => {
     const role = req.user.role;
     if (role != "admin") {
       throw {
-        name: "Unauthorized",
+        name: "Forbidden",
         message: "You are not authorized to access site",
       };
     }
